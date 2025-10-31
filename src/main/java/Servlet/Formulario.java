@@ -1,4 +1,5 @@
 package Servlet;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -67,16 +68,11 @@ public class Formulario extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
-        out.println("    <title>Acceso Permitido</title>");
-        out.println("    <meta charset='UTF-8'>");
-        out.println("    <style>");
-        out.println("        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f8ff; }");
-        out.println("        h1 { color: #2e8b57; }");
-        out.println("    </style>");
+        out.println("<title>Acceso Permitido</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("    <h1>Bienvenido a la página " + (usuario != null ? usuario : "Usuario") + "</h1>");
-        out.println("    <p>Has accedido correctamente al sistema.</p>");
+        out.println("<h1>Bienvenido a la página " + (usuario != null ? usuario : "Usuario") + "</h1>");
+        out.println("<p>Has accedido correctamente al sistema.</p>");
         out.println("</body>");
         out.println("</html>");
     }
@@ -90,17 +86,12 @@ public class Formulario extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
-        out.println("    <title>Acceso Denegado</title>");
-        out.println("    <meta charset='UTF-8'>");
-        out.println("    <style>");
-        out.println("        body { font-family: Arial, sans-serif; margin: 40px; background-color: #fff0f0; }");
-        out.println("        h1 { color: #dc143c; }");
-        out.println("    </style>");
+        out.println("<title>Acceso Denegado</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("    <h1>No tienes acceso a este sitio</h1>");
-        out.println("    <p>Las credenciales proporcionadas son incorrectas.</p>");
-        out.println("    <p><a href='javascript:history.back()'>Volver al formulario</a></p>");
+        out.println("<h1>No tienes acceso a este sitio</h1>");
+        out.println("<p>Las credenciales proporcionadas son incorrectas.</p>");
+        out.println("<p><a href='javascript:history.back()'>Volver al formulario</a></p>");
         out.println("</body>");
         out.println("</html>");
     }
